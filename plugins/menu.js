@@ -17,16 +17,17 @@ bot(
 			cmd => cmd.pattern && !cmd.dontAddCommandList && !cmd.pattern.toString().includes('undefined')
 		).length;
 		let menuInfo = `\`\`\`╭─── ${config.BOT_INFO.split(';')[1]} ────
-│ Owner: ${config.BOT_INFO.split(';')[0]}		
-│ Prefix: ${PREFIX}
-│ Plugins: ${cmds}
-│ Mode: ${mode ? 'private' : 'public'}
-│ Uptime: ${runtime(process.uptime())}
-│ Platform: ${platform()}
-│ Memory: ${formatBytes(totalmem() - freemem())}
-│ Day: ${new Date().toLocaleDateString('en-US', { weekday: 'long' })}
-│ Date: ${new Date().toLocaleDateString('en-US')}
-│ Date: ${new Date().toLocaleTimeString('en-US', {
+│ *Owner*: ${config.BOT_INFO.split(';')[0]}		
+│ *Prefix*: ${PREFIX}
+│ *Plugins*: ${cmds}
+│ *Dev* : *Mr Ntando*
+│ *Mode*: ${mode ? 'private' : 'public'}
+│ *Uptime*: ${runtime(process.uptime())}
+│ *Platform*: ${platform()}
+│ *Memory*: ${formatBytes(totalmem() - freemem())}
+│ *Day*: ${new Date().toLocaleDateString('en-US', { weekday: 'long' })}
+│ *Date*: ${new Date().toLocaleDateString('en-US')}
+│ *Date*: ${new Date().toLocaleTimeString('en-US', {
 			timeZone: config.TIME_ZONE
 		})}
 │ Version: ${config.VERSION}
